@@ -11,7 +11,7 @@ import dynamic from 'next/dynamic'
 const FloatingSkillItem = dynamic(() => import('@/components/FloatingSkillItem'), { ssr: false })
 
 const programmingLanguages = ["JavaScript", "TypeScript", "Python", "HTML/CSS", "PostgreSQL"]
-const developerTools = ["Git", "MongoDB", "VS Code", "Postman","Replit","V0","Cursor","Windsurf"]
+const developerTools = ["Git", "MongoDB", "VS Code", "Postman","Replit","V0","Cursor","Windsurf","Docker Desktop"]
 const familiarityWith = ["Redis", "Node.js", "React", "Express.js", "Flask", "FastAPI", "HuggingFace", "PostGIS", "Cloud-Optimized GeoTIFF (COG)", "WebRTC","RAG Architecture"]
 
 export default function Experience() {
