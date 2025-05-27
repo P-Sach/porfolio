@@ -12,7 +12,7 @@ const FloatingSkillItem = dynamic(() => import('@/components/FloatingSkillItem')
 
 const programmingLanguages = ["JavaScript", "TypeScript", "Python", "HTML/CSS", "PostgreSQL"]
 const developerTools = ["Git", "MongoDB", "VS Code", "Postman","Replit","V0","Cursor","Windsurf","Docker Desktop"]
-const familiarityWith = ["Redis", "Node.js", "React", "Express.js", "Flask", "FastAPI", "HuggingFace", "PostGIS", "Cloud-Optimized GeoTIFF (COG)", "WebRTC","RAG Architecture"]
+const familiarityWith = ["Redis", "Node.js", "Next.js", "Jira", "React", "Express.js", "Flask", "FastAPI", "HuggingFace", "PostGIS", "Cloud-Optimized GeoTIFF (COG)", "WebRTC","RAG Architecture"]
 
 export default function Experience() {
   const [showConfetti, setShowConfetti] = useState(false)
