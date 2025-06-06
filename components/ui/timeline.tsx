@@ -27,14 +27,14 @@ const experiences: TimelineItemData[] = [
   },
   {
     company: "RightChoice.AI",
-    role: "Software Development Intern",
+    role: "Product Intern",
     duration: "June 2023 - August 2022",
     location: "Gurgaon, India",
     description: [
       "Collaborated with marketing and sales teams to enhance the Local Keywords Finder tool based on user feedback.",
       "Supported improvement of tools for managing local online presence through collaborative development."
     ],
-    technologies: ["Python","Flask"]
+    technologies: ["Python"]
   }
 ];
 
