@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Icon, Github, ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
+import { Icon, Github, ExternalLink, ChevronDown, ChevronUp, Map, Heart } from 'lucide-react';
 
 interface ProjectData {
   title: string;
@@ -20,62 +20,97 @@ interface ProjectData {
 
 const projects: ProjectData[] = [
   {
-    title: "AnonShare",
-    description: "A privacy-focused file sharing platform enabling anonymous transfers with time-limited links and QR code access",
-    color: "bg-gradient-to-br from-indigo-500 to-purple-500",
-    icon: "Share2",
-    link: "#", // Optional primary link
-    technologies: ["Redis", "MongoDB", "Node.js", "Express.js","React.js","Vite"],
-    features: ["Anonymous file transfers",
-      "Time-limited access links",
-      "QR code access",
-      "Secure temporary storage"],
-    codeLink: "https://github.com/P-Sach/AnonShare",
+    title: "Adoptable.in",
+    description: "Non-profit blockchain-powered pet adoption and welfare platform using NFTs for pet identities, smart contracts for adoption, and tokenized rewards (March 2025 - Present)",
+    color: "bg-gradient-to-br from-pink-500 to-purple-500",
+    icon: "Heart",
+    link: "#",
+    technologies: ["Blockchain", "NFTs", "Smart Contracts", "Web3", "Solidity", "React.js", "Node.js"],
+    features: [
+      "Blockchain-powered pet adoption platform",
+      "NFT-based pet identity and ownership records",
+      "Smart contracts for secure adoption processes",
+      "Tokenized rewards system for platform engagement",
+      "Non-profit welfare initiative for animal care",
+      "Transparent and immutable adoption history"
+    ],
+    codeLink: "#",
     demoLink: "#",
     learnMoreLink: "#",
   },
   {
-    title: "LocShare (WIP)",
-    description: "Local network sharing mode with password protection for secure peer-to-peer transfers.(Its a Sub-Part of AnonShare)",
-    color: "bg-gradient-to-br from-blue-500 to-cyan-500",
-    icon: "Network",
-    link: "#",
-    technologies: ["WebRTC", "Node.js", "React","Express.js"],
-    features: ["Local network file sharing",
-      "Password protection",
-      "Peer-to-peer transfers",
-      "No external server dependency"],
+    title: "AnonShare",
+    description: "Led end-to-end development of anonymous file sharing platform with secure peer-to-peer local network transfers (Oct 2024 - Nov 2024)",
+    color: "bg-gradient-to-br from-indigo-500 to-purple-500",
+    icon: "Share2",
+    link: "https://github.com/P-Sach/AnonShare",
+    technologies: ["Node.js", "Express.js", "React.js", "MongoDB", "Redis", "WebRTC", "Vite"],
+    features: [
+      "Product Leadership: Led end-to-end development of anonymous file sharing platform",
+      "Anonymous file transfers with secure temporary storage",
+      "Time-limited access links for enhanced security",
+      "QR code generation for easy mobile access",
+      "Feature Innovation: LocShare for secure peer-to-peer local network transfers with password protection",
+      "Peer-to-peer WebRTC transfers with no external server dependency"
+    ],
     codeLink: "https://github.com/P-Sach/AnonShare",
     demoLink: "#",
     learnMoreLink: "#",
   },
   {
     title: "Let's Talk",
-    description: "Open-source Python library to simplify LLM integration for game NPCs with RAG implementation",
+    description: "Open-source Python library simplifying LLM integration for game NPCs using RAG architecture for context-aware conversations",
     color: "bg-gradient-to-br from-green-500 to-teal-500",
     icon: "MessageSquare",
     link: "#",
-    technologies: ["Python", "LLM", "RAG", "HuggingFace"],
-    features: ["Simplified LLM integration for games",
-      "Retrieve and use in-game context",
-      "NPC memory of past events",
-      "Dynamic world state responses"],
+    technologies: ["Python", "LLM", "RAG Architecture", "HuggingFace", "NLP"],
+    features: [
+      "Simplified LLM integration for game development",
+      "RAG implementation for retrieving in-game context",
+      "NPC memory of past interactions and events",
+      "Dynamic responses based on world state",
+      "Easy-to-use API for game developers",
+      "Support for multiple LLM providers"
+    ],
     codeLink: "#",
     demoLink: "#",
     learnMoreLink: "#",
   },
   {
     title: "Pricey",
-    description: "AI-enabled chatbot providing current market prices of groceries in India",
+    description: "AI-powered chatbot providing real-time market prices for groceries across India using web scraping and natural language processing",
     color: "bg-gradient-to-br from-orange-500 to-red-500",
     icon: "ShoppingCart",
-    link: "#",
-    technologies: ["Python", "AI", "Chatbot", "Web Scraping"],
-    features: ["Real-time grocery price tracking",
-      "Natural language interface",
-      "Market data analysis",
-      "India-specific pricing"],
+    link: "https://github.com/P-Sach/Pricey",
+    technologies: ["Python", "AI/ML", "NLP", "Web Scraping", "Chatbot", "REST APIs"],
+    features: [
+      "Real-time grocery price tracking across multiple retailers",
+      "Natural language interface for easy queries",
+      "Market data analysis and price trends",
+      "Location-based pricing for major Indian cities",
+      "Automated data collection and updates",
+      "Price comparison and recommendations"
+    ],
     codeLink: "https://github.com/P-Sach/Pricey",
+    demoLink: "#",
+    learnMoreLink: "#",
+  },
+  {
+    title: "GIS Mapping Application",
+    description: "Multi-view geospatial application with real-time map synchronization and optimized data processing",
+    color: "bg-gradient-to-br from-blue-500 to-cyan-500",
+    icon: "Map",
+    link: "#",
+    technologies: ["Python", "OpenLayers", "PostgreSQL", "PostGIS", "Cloud-Optimized GeoTIFF", "JavaScript"],
+    features: [
+      "Real-time map synchronization across multiple views",
+      "Cloud-Optimized GeoTIFF (COG) format processing",
+      "Efficient geospatial data storage with PostGIS",
+      "Optimized database queries for large datasets",
+      "Interactive map controls and layers",
+      "Automated geospatial data processing workflows"
+    ],
+    codeLink: "#",
     demoLink: "#",
     learnMoreLink: "#",
   },

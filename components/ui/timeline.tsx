@@ -14,27 +14,47 @@ interface TimelineItemData {
 
 const experiences: TimelineItemData[] = [
   {
-    company: "Knowledge Spatial",
-    role: "Software Development Intern",
-    duration: "May 2024 - August 2024",
+    company: "TechCurators",
+    role: "Technical Program Manager Intern (Product)",
+    duration: "Jun 2025 - Present",
     location: "Gurgaon, India",
     description: [
-      "Assisted in development of scripts to automate the processing of geospatial data, converting files into Cloud Optimized GeoTIFF (COG) format.",
-      "Worked on map synchronization using OpenLayers, ensuring accurate real-time map updates for multi-view GIS applications.",
-      "Integrated PostgreSQL for data logging and developed database integration scripts to maintain real-time logging and data integrity."
+      "Drove end-to-end execution for 3+ client projects, aligning product, design, and development teams to deliver high-quality solutions.",
+      "Conducted market research and collected user insights to refine product strategy and feature prioritization.",
+      "Created product requirement documents (PRDs) and maintained roadmaps using Notion and Jira for effective project tracking.",
+      "Led cross-functional standups and daily team meetings, conducted sprint reviews to ensure smooth delivery and team alignment.",
+      "Used AI tools (ChatGPT, Notion AI, Perplexity) to enhance documentation, automation, and decision support processes."
     ],
-    technologies: ["Python", "OpenLayers", "PostgreSQL", "GIS", "HTML", "CSS", "JavaScript", "Node.js","Flask","express.js"]
+    technologies: ["Product Management", "Notion", "Jira", "ChatGPT", "Notion AI", "Perplexity", "Agile", "Scrum", "PRDs", "Roadmapping", "Sprint Planning"]
+  },
+  {
+    company: "Knowledge Spatial",
+    role: "Software Development Intern",
+    duration: "May 2024 - Aug 2024",
+    location: "Gurgaon, India",
+    description: [
+      "Developed and maintained full-stack web applications using Node.js, Express.js, and React.js, ensuring seamless integration between frontend and backend systems.",
+      "Designed and implemented RESTful APIs to support application features and facilitate data exchange between services.",
+      "Built scalable server-side applications with optimized database queries for improved performance.",
+      "Automated geospatial data processing workflows, converting files into Cloud-Optimized GeoTIFF (COG) format using Python scripts.",
+      "Implemented map synchronization features using OpenLayers for multi-view GIS applications with real-time updates.",
+      "Integrated PostgreSQL with PostGIS extension for efficient geospatial data storage and querying.",
+      "Developed database integration scripts to maintain real-time logging and ensure data integrity across systems."
+    ],
+    technologies: ["Node.js", "Express.js", "React.js", "Python", "OpenLayers", "PostgreSQL", "PostGIS", "REST APIs", "Flask", "JavaScript", "HTML", "CSS", "Git"]
   },
   {
     company: "RightChoice.AI",
     role: "Product Intern",
-    duration: "June 2023 - August 2022",
+    duration: "Jun 2023 - Aug 2023",
     location: "Gurgaon, India",
     description: [
-      "Collaborated with marketing and sales teams to enhance the Local Keywords Finder tool based on user feedback.",
-      "Supported improvement of tools for managing local online presence through collaborative development."
+      "Collaborated with cross-functional teams including marketing and sales to enhance the Local Keywords Finder tool based on user feedback and market analysis.",
+      "Contributed to product improvement initiatives for tools managing local online presence through collaborative development.",
+      "Participated in user research and testing to identify pain points and improvement opportunities.",
+      "Supported data analysis efforts to track tool performance and user engagement metrics."
     ],
-    technologies: ["Python"]
+    technologies: ["Python", "Product Management", "User Research", "Data Analysis"]
   }
 ];
 

@@ -144,7 +144,7 @@ export default function Dashboard() {
               <div className="space-y-4">
                 <h2 className="text-4xl font-bold">About Me</h2>
                 <p className="text-lg text-muted-foreground">
-                  Based in <span className="font-semibold text-primary">Gurgaon, India</span>. I'm open to remote and hybrid roles.
+                  Based in <span className="font-semibold text-primary">Gurgaon, India</span>. Recent Computer Science graduate with strong foundation in software development, backend architecture, and AI/ML integration. Experienced in building scalable web applications and geospatial solutions. I'm open to remote and hybrid roles.
                 </p>
                 <div className="flex items-center gap-2 mt-4">
                   <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
@@ -155,16 +155,20 @@ export default function Dashboard() {
                   <h3 className="text-2xl font-bold mb-4">Core Expertise</h3>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="p-4 bg-white/50 rounded-xl border-2 border-black">
-                      <h4 className="font-bold mb-2">Frontend Development</h4>
-                      <p className="text-sm text-muted-foreground">React, Next.js, TypeScript</p>
+                      <h4 className="font-bold mb-2">Product Management</h4>
+                      <p className="text-sm text-muted-foreground">PRDs, Roadmaps, Agile, Jira, Notion</p>
                     </div>
                     <div className="p-4 bg-white/50 rounded-xl border-2 border-black">
-                      <h4 className="font-bold mb-2">Dev Tools</h4>
-                      <p className="text-sm text-muted-foreground">Git, Postman, VSCode</p>
+                      <h4 className="font-bold mb-2">Full-Stack Development</h4>
+                      <p className="text-sm text-muted-foreground">React, Next.js, Node.js, Express</p>
                     </div>
                     <div className="p-4 bg-white/50 rounded-xl border-2 border-black">
-                      <h4 className="font-bold mb-2">Backend</h4>
-                      <p className="text-sm text-muted-foreground">Node.js, Express, FastApi</p>
+                      <h4 className="font-bold mb-2">Backend & Databases</h4>
+                      <p className="text-sm text-muted-foreground">REST APIs, PostgreSQL, MongoDB, Redis</p>
+                    </div>
+                    <div className="p-4 bg-white/50 rounded-xl border-2 border-black">
+                      <h4 className="font-bold mb-2">Emerging Tech</h4>
+                      <p className="text-sm text-muted-foreground">Blockchain, AI/ML, RAG, GIS</p>
                     </div>
                   </div>
                 </div>

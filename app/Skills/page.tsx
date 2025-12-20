@@ -10,9 +10,9 @@ import dynamic from 'next/dynamic'
 
 const FloatingSkillItem = dynamic(() => import('@/components/FloatingSkillItem'), { ssr: false })
 
-const programmingLanguages = ["JavaScript", "TypeScript", "Python", "HTML/CSS", "PostgreSQL"]
-const developerTools = ["Git", "MongoDB", "VS Code", "Postman","Replit","V0","Cursor","Windsurf","Docker Desktop"]
-const familiarityWith = ["Redis", "Node.js", "Next.js", "Jira", "React", "Express.js", "Flask", "FastAPI", "HuggingFace", "PostGIS", "Cloud-Optimized GeoTIFF (COG)", "WebRTC","RAG Architecture"]
+const programmingLanguages = ["Python", "PostgreSQL", "JavaScript", "HTML/CSS", "TypeScript", "SQL"]
+const developerTools = ["Git", "VS Code", "Postman", "Docker Desktop", "MongoDB", "Replit", "V0", "Cursor", "Windsurf", "Notion", "Jira", "n8n", "Airtable"]
+const familiarityWith = ["PostGIS", "Redis", "MongoDB", "Supabase", "Cloudflare v2", "Trello", "Node.js", "Next.js", "React", "Express.js", "Flask", "FastAPI", "Hugging Face", "Figma", "OpenLayers", "Cloud-Optimized GeoTIFF (COG)", "WebRTC", "RAG Architecture", "REST APIs"]
 
 export default function Experience() {
   const [showConfetti, setShowConfetti] = useState(false)
