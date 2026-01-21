@@ -72,7 +72,7 @@ export default function Experience() {
             <div className="mt-8">
               <h2 className="text-xl font-black mb-4">CONNECT</h2>
               <div className="space-y-2">
-                <a href="https://github.com/P-Sach" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/P-Sach" target="_blank" rel="noopener noreferrer" className="block">
                   <Button
                     variant="outline"
                     className="w-full justify-start gap-2 rounded-xl border-2 border-black font-bold"
@@ -80,7 +80,7 @@ export default function Experience() {
                     <Github className="h-5 w-5" /> Github
                   </Button>
                 </a>
-                <a href="https://linkedin.com/in/parthsachdeva" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com/in/parthsachdeva" target="_blank" rel="noopener noreferrer" className="block">
                   <Button
                     variant="outline"
                     className="w-full justify-start gap-2 rounded-xl border-2 border-black font-bold"
@@ -88,7 +88,7 @@ export default function Experience() {
                     <Linkedin className="h-5 w-5" /> LinkedIn
                   </Button>
                 </a>
-                <a href="mailto:parthsachdeva10@gmail.com">
+                <a href="mailto:parthsachdeva10@gmail.com" className="block">
                   <Button
                     variant="outline"
                     className="w-full justify-start gap-2 rounded-xl border-2 border-black font-bold"

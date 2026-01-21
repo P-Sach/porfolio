@@ -16,7 +16,7 @@ const experiences: TimelineItemData[] = [
   {
     company: "TechCurators",
     role: "Technical Program Manager Intern (Product)",
-    duration: "Jun 2025 - Present",
+    duration: "Jun 2025 - Nov 2025",
     location: "Gurgaon, India",
     description: [
       "Drove end-to-end execution for 3+ client projects, aligning product, design, and development teams to deliver high-quality solutions.",
