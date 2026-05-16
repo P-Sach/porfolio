@@ -14,6 +14,20 @@ interface TimelineItemData {
 
 const experiences: TimelineItemData[] = [
   {
+    company: "Cars24",
+    role: "Ai Program Manager Intern (Product)",
+    duration: "Feb 2026 - Current",
+    location: "Gurgaon, India",
+    description: [
+      "DesignedLLM-based Customer support chatbot workflows with structured prompts for negotiation, support and ticket handling.",
+      "Managedend-to-end chatbot lifecycle, integrating MessageBird and Langfuse for deployment, monitoring and customer-facing support.",
+      "Built telemetry-driven auditing pipeline (Snowflake → LLM evaluation) integrated with Power BI dashboards to proactively identify at-risk users and surface migration guidance.",
+      "Led cross-functional standups and daily team meetings, conducted sprint reviews to ensure smooth delivery and team alignment.",
+      "Automatedinternal workflows via Power Automate, AppScript and n8n, reducing manual load and standardizing cross-team communication processes."
+    ],
+    technologies: ["Product Management", "Excel", "Claude", "Codex", "Power Automate", "PRDs", "Workflows", "Sprint Planning", "MessageBird", "Langfuse", "Snowflake", "Power BI", "AppScript", "n8n"]
+  },
+  {
     company: "TechCurators",
     role: "Technical Program Manager Intern (Product)",
     duration: "Jun 2025 - Nov 2025",
