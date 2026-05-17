@@ -35,7 +35,7 @@ const projects: ProjectData[] = [
       "Transparent and immutable adoption history"
     ],
     codeLink: "#",
-    demoLink: "#",
+    demoLink: "https://adoptable.in/",
     learnMoreLink: "#",
   },
   {
@@ -54,7 +54,7 @@ const projects: ProjectData[] = [
       "Peer-to-peer WebRTC transfers with no external server dependency"
     ],
     codeLink: "https://github.com/P-Sach/AnonShare",
-    demoLink: "#",
+    demoLink: "https://anonshare-vaultdrop.vercel.app/",
     learnMoreLink: "#",
   },
   {
