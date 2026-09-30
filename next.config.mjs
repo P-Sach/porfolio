@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    // Resume (5 MB) / photo (3 MB) uploads go through server actions.
+    serverActions: { bodySizeLimit: '6mb' },
+  },
   images: {
     unoptimized: true,
   },
