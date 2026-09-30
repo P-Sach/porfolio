@@ -16,21 +16,21 @@ const GlobeComponent = dynamic(() => import('@/components/globe-marker'), { ssr:
 // Search content database
 const searchContent = [
   // Skills
-  { title: "React", category: "Skills", url: "/Skills", keywords: ["react", "frontend", "javascript", "ui", "component"] },
-  { title: "Next.js", category: "Skills", url: "/Skills", keywords: ["nextjs", "next", "react", "framework", "ssr"] },
-  { title: "TypeScript", category: "Skills", url: "/Skills", keywords: ["typescript", "ts", "javascript", "type", "programming"] },
-  { title: "Node.js", category: "Skills", url: "/Skills", keywords: ["nodejs", "node", "backend", "javascript", "server"] },
-  { title: "PostgreSQL", category: "Skills", url: "/Skills", keywords: ["postgresql", "postgres", "sql", "database", "db"] },
-  { title: "MongoDB", category: "Skills", url: "/Skills", keywords: ["mongodb", "mongo", "nosql", "database", "db"] },
-  { title: "Python", category: "Skills", url: "/Skills", keywords: ["python", "programming", "backend", "ai", "ml"] },
-  { title: "AI/ML", category: "Skills", url: "/Skills", keywords: ["ai", "ml", "artificial intelligence", "machine learning", "rag"] },
-  { title: "Blockchain", category: "Skills", url: "/Skills", keywords: ["blockchain", "crypto", "web3", "smart contract"] },
-  { title: "GIS", category: "Skills", url: "/Skills", keywords: ["gis", "geospatial", "maps", "location"] },
+  { title: "React", category: "Skills", url: "/skills", keywords: ["react", "frontend", "javascript", "ui", "component"] },
+  { title: "Next.js", category: "Skills", url: "/skills", keywords: ["nextjs", "next", "react", "framework", "ssr"] },
+  { title: "TypeScript", category: "Skills", url: "/skills", keywords: ["typescript", "ts", "javascript", "type", "programming"] },
+  { title: "Node.js", category: "Skills", url: "/skills", keywords: ["nodejs", "node", "backend", "javascript", "server"] },
+  { title: "PostgreSQL", category: "Skills", url: "/skills", keywords: ["postgresql", "postgres", "sql", "database", "db"] },
+  { title: "MongoDB", category: "Skills", url: "/skills", keywords: ["mongodb", "mongo", "nosql", "database", "db"] },
+  { title: "Python", category: "Skills", url: "/skills", keywords: ["python", "programming", "backend", "ai", "ml"] },
+  { title: "AI/ML", category: "Skills", url: "/skills", keywords: ["ai", "ml", "artificial intelligence", "machine learning", "rag"] },
+  { title: "Blockchain", category: "Skills", url: "/skills", keywords: ["blockchain", "crypto", "web3", "smart contract"] },
+  { title: "GIS", category: "Skills", url: "/skills", keywords: ["gis", "geospatial", "maps", "location"] },
   
   // Sections
-  { title: "Work Experience", category: "Section", url: "/Experience", keywords: ["work", "experience", "jobs", "career", "employment"] },
-  { title: "Projects", category: "Section", url: "/Projects", keywords: ["projects", "portfolio", "work", "development"] },
-  { title: "Skills", category: "Section", url: "/Skills", keywords: ["skills", "technologies", "tech stack", "expertise"] },
+  { title: "Work Experience", category: "Section", url: "/experience", keywords: ["work", "experience", "jobs", "career", "employment"] },
+  { title: "Projects", category: "Section", url: "/projects", keywords: ["projects", "portfolio", "work", "development"] },
+  { title: "Skills", category: "Section", url: "/skills", keywords: ["skills", "technologies", "tech stack", "expertise"] },
   
   // About
   { title: "About Me", category: "About", url: "/", keywords: ["about", "bio", "information", "contact", "location", "gurgaon", "india"] },
@@ -281,13 +281,13 @@ export default function Dashboard() {
               <Link href="/" className="flex items-center gap-2 text-lg font-bold p-3 bg-black text-white rounded-xl">
                 Home
               </Link>
-              <Link href="/Experience" className="flex items-center gap-2 text-lg font-bold p-3 hover:bg-black/10 rounded-xl">
+              <Link href="/experience" className="flex items-center gap-2 text-lg font-bold p-3 hover:bg-black/10 rounded-xl">
                 Work Experience
               </Link>
-              <Link href="/Projects" className="flex items-center gap-2 text-lg font-bold p-3 hover:bg-black/10 rounded-xl">
+              <Link href="/projects" className="flex items-center gap-2 text-lg font-bold p-3 hover:bg-black/10 rounded-xl">
                 Projects
               </Link>
-              <Link href="/Skills" className="flex items-center gap-2 text-lg font-bold p-3 hover:bg-black/10 rounded-xl">
+              <Link href="/skills" className="flex items-center gap-2 text-lg font-bold p-3 hover:bg-black/10 rounded-xl">
                 Skills
               </Link>
             </nav>

@@ -18,13 +18,13 @@ export default function MobileNavigation() {
           <Link href="/" className="flex items-center gap-2 text-lg font-bold p-3 bg-black text-white rounded-xl">
             Home
           </Link>
-          <Link href="/Experience" className="flex items-center gap-2 text-lg font-bold p-3 hover:bg-black/10 rounded-xl">
+          <Link href="/experience" className="flex items-center gap-2 text-lg font-bold p-3 hover:bg-black/10 rounded-xl">
             Work Experience
           </Link>
-          <Link href="/Projects" className="flex items-center gap-2 text-lg font-bold p-3 hover:bg-black/10 rounded-xl">
+          <Link href="/projects" className="flex items-center gap-2 text-lg font-bold p-3 hover:bg-black/10 rounded-xl">
             Projects
           </Link>
-          <Link href="/Skills" className="flex items-center gap-2 text-lg font-bold p-3 hover:bg-black/10 rounded-xl">
+          <Link href="/skills" className="flex items-center gap-2 text-lg font-bold p-3 hover:bg-black/10 rounded-xl">
             Skills
           </Link>
         </nav>

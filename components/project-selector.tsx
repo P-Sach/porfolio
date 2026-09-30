@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Icon, Github, ExternalLink, ChevronDown, ChevronUp, Map, Heart } from 'lucide-react';
+import { Github, ExternalLink, ChevronDown, Map, Heart, Share2, MessageSquare, ShoppingCart, type LucideIcon } from 'lucide-react';
 
 interface ProjectData {
   title: string;
@@ -118,9 +118,11 @@ const projects: ProjectData[] = [
 
 const initialVisibleTechCount = 3; // Number of technologies to show when collapsed
 
+const icons: Record<string, LucideIcon> = { Heart, Share2, MessageSquare, ShoppingCart, Map };
+
 const IconComponent = ({ name, color }: { name: string; color: string }) => {
-  const LucideIcon = Icon[name as keyof typeof Icon] as React.ElementType;
-  return LucideIcon ? <LucideIcon className={`h-8 w-8 ${color}`} /> : null;
+  const Icon = icons[name];
+  return Icon ? <Icon className={`h-8 w-8 ${color}`} /> : null;
 };
 
 export default function ProjectSelector() {

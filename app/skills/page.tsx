@@ -14,7 +14,7 @@ const programmingLanguages = ["Python", "PostgreSQL", "JavaScript", "HTML/CSS", 
 const developerTools = ["Git", "VS Code", "Postman", "Docker Desktop", "MongoDB", "Replit", "V0", "Cursor", "Windsurf", "Notion", "Jira", "n8n", "Airtable"]
 const familiarityWith = ["PostGIS", "Redis", "MongoDB", "Supabase", "Cloudflare v2", "Trello", "Node.js", "Next.js", "React", "Express.js", "Flask", "FastAPI", "Hugging Face", "Figma", "OpenLayers", "Cloud-Optimized GeoTIFF (COG)", "WebRTC", "RAG Architecture", "REST APIs", "Prompt Engineering", "Power BI", "Agile Methodologies", "CI/CD Pipelines", "Unit Testing", "Integration Testing", "Data Visualization", "Data Analysis"]
 
-export default function Experience() {
+export default function Skills() {
   const [showConfetti, setShowConfetti] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
   const [progLangDims, setProgLangDims] = useState({ width: 0, height: 0 })
@@ -76,9 +76,9 @@ export default function Experience() {
           <div className="hidden md:block border-r-4 border-black bg-white/40 p-4">
             <nav className="space-y-2">
               <Link href="/" className="flex items-center gap-2 text-lg font-bold p-3 hover:bg-black/10 rounded-xl">Home</Link>
-              <Link href="/Experience" className="flex items-center gap-2 text-lg font-bold p-3 hover:bg-black/10 rounded-xl">Work Experience</Link>
-              <Link href="/Projects" className="flex items-center gap-2 text-lg font-bold p-3 hover:bg-black/10 rounded-xl">Projects</Link>
-              <Link href="/Skills" className="flex items-center gap-2 text-lg font-bold p-3 bg-black text-white rounded-xl">Skills</Link>
+              <Link href="/experience" className="flex items-center gap-2 text-lg font-bold p-3 hover:bg-black/10 rounded-xl">Work Experience</Link>
+              <Link href="/projects" className="flex items-center gap-2 text-lg font-bold p-3 hover:bg-black/10 rounded-xl">Projects</Link>
+              <Link href="/skills" className="flex items-center gap-2 text-lg font-bold p-3 bg-black text-white rounded-xl">Skills</Link>
             </nav>
             <div className="mt-8">
               <h2 className="text-xl font-black mb-4">CONNECT</h2>

@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button"
 import { Linkedin, Menu, Github, Mail } from "lucide-react"
 import MobileNavigation from "@/components/mobile-navigation"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import SectionHeading from "@/components/ui/section-heading"
-import Timeline from "@/components/ui/timeline"
+import StudioSelector from "@/components/project-selector"
 import Confetti from 'react-confetti'
 import { useState } from "react"
 
-export default function Experience() {
+
+export default function Projects() {
   const [showConfetti, setShowConfetti] = useState(false)
 
   return (
@@ -58,13 +58,13 @@ export default function Experience() {
               <Link href="/" className="flex items-center gap-2 text-lg font-bold p-3 hover:bg-black/10 rounded-xl">
                 Home
               </Link>
-              <Link href="/Experience" className="flex items-center gap-2 text-lg font-bold p-3 bg-black text-white rounded-xl">
+              <Link href="/experience" className="flex items-center gap-2 text-lg font-bold p-3 hover:bg-black/10 rounded-xl">
                 Work Experience
               </Link>
-              <Link href="/Projects" className="flex items-center gap-2 text-lg font-bold p-3 hover:bg-black/10 rounded-xl">
+              <Link href="/projects" className="flex items-center gap-2 text-lg font-bold p-3 bg-black text-white rounded-xl">
                 Projects
               </Link>
-              <Link href="/Skills" className="flex items-center gap-2 text-lg font-bold p-3 hover:bg-black/10 rounded-xl">
+              <Link href="/skills" className="flex items-center gap-2 text-lg font-bold p-3 hover:bg-black/10 rounded-xl">
                 Skills
               </Link>
             </nav>
@@ -107,14 +107,10 @@ export default function Experience() {
                 <div className="absolute top-1/3 right-1/3 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
                 <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
               </div>
-
-              <div className="container relative z-10">
-                <SectionHeading title="Work Experience" subtitle="My professional journey" />
-
-                <div className="mt-16">
-                  <Timeline />
-                </div>
+              <div className="relative z-10">
+                <StudioSelector/>
               </div>
+
             </section>
           </div>
         </div>
