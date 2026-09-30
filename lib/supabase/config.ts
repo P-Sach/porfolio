@@ -5,7 +5,15 @@ export const ASSET_BUCKET = "site-assets"
 
 /** Public reads + login only need the URL and anon key. */
 export function isSupabaseConfigured(): boolean {
-  return Boolean(supabaseUrl && supabaseAnonKey)
+  if (!supabaseUrl || !supabaseAnonKey) return false
+  try {
+    // A malformed URL (missing https://, stray quotes) makes the client
+    // constructor throw, so treat it as "not configured" instead.
+    const { protocol } = new URL(supabaseUrl)
+    return protocol === "https:" || protocol === "http:"
+  } catch {
+    return false
+  }
 }
 
 /** The admin area additionally needs the service-role key and an owner email. */
