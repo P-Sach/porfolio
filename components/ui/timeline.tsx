@@ -1,109 +1,40 @@
-'use client';
-import { motion } from "framer-motion";
-import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+"use client"
 
-interface TimelineItemData {
-  company: string;
-  role: string;
-  duration: string;
-  location: string;
-  description: string[];
-  technologies: string[];
-}
+import { motion } from "framer-motion"
+import { useState } from "react"
+import type { ExperienceItem } from "@/lib/content/schema"
 
-const experiences: TimelineItemData[] = [
-  {
-    company: "Cars24",
-    role: "Ai Program Manager Intern (Product)",
-    duration: "Feb 2026 - Current",
-    location: "Gurgaon, India",
-    description: [
-      "DesignedLLM-based Customer support chatbot workflows with structured prompts for negotiation, support and ticket handling.",
-      "Managedend-to-end chatbot lifecycle, integrating MessageBird and Langfuse for deployment, monitoring and customer-facing support.",
-      "Built telemetry-driven auditing pipeline (Snowflake → LLM evaluation) integrated with Power BI dashboards to proactively identify at-risk users and surface migration guidance.",
-      "Led cross-functional standups and daily team meetings, conducted sprint reviews to ensure smooth delivery and team alignment.",
-      "Automatedinternal workflows via Power Automate, AppScript and n8n, reducing manual load and standardizing cross-team communication processes."
-    ],
-    technologies: ["Product Management", "Excel", "Claude", "Codex", "Power Automate", "PRDs", "Workflows", "Sprint Planning", "MessageBird", "Langfuse", "Snowflake", "Power BI", "AppScript", "n8n"]
-  },
-  {
-    company: "TechCurators",
-    role: "Technical Program Manager Intern (Product)",
-    duration: "Jun 2025 - Nov 2025",
-    location: "Gurgaon, India",
-    description: [
-      "Drove end-to-end execution for 3+ client projects, aligning product, design, and development teams to deliver high-quality solutions.",
-      "Conducted market research and collected user insights to refine product strategy and feature prioritization.",
-      "Created product requirement documents (PRDs) and maintained roadmaps using Notion and Jira for effective project tracking.",
-      "Led cross-functional standups and daily team meetings, conducted sprint reviews to ensure smooth delivery and team alignment.",
-      "Used AI tools (ChatGPT, Notion AI, Perplexity) to enhance documentation, automation, and decision support processes."
-    ],
-    technologies: ["Product Management", "Notion", "Jira", "ChatGPT", "Notion AI", "Perplexity", "Agile", "Scrum", "PRDs", "Roadmapping", "Sprint Planning"]
-  },
-  {
-    company: "Knowledge Spatial",
-    role: "Software Development Intern",
-    duration: "May 2024 - Aug 2024",
-    location: "Gurgaon, India",
-    description: [
-      "Developed and maintained full-stack web applications using Node.js, Express.js, and React.js, ensuring seamless integration between frontend and backend systems.",
-      "Designed and implemented RESTful APIs to support application features and facilitate data exchange between services.",
-      "Built scalable server-side applications with optimized database queries for improved performance.",
-      "Automated geospatial data processing workflows, converting files into Cloud-Optimized GeoTIFF (COG) format using Python scripts.",
-      "Implemented map synchronization features using OpenLayers for multi-view GIS applications with real-time updates.",
-      "Integrated PostgreSQL with PostGIS extension for efficient geospatial data storage and querying.",
-      "Developed database integration scripts to maintain real-time logging and ensure data integrity across systems."
-    ],
-    technologies: ["Node.js", "Express.js", "React.js", "Python", "OpenLayers", "PostgreSQL", "PostGIS", "REST APIs", "Flask", "JavaScript", "HTML", "CSS", "Git"]
-  },
-  {
-    company: "RightChoice.AI",
-    role: "Product Intern",
-    duration: "Jun 2023 - Aug 2023",
-    location: "Gurgaon, India",
-    description: [
-      "Collaborated with cross-functional teams including marketing and sales to enhance the Local Keywords Finder tool based on user feedback and market analysis.",
-      "Contributed to product improvement initiatives for tools managing local online presence through collaborative development.",
-      "Participated in user research and testing to identify pain points and improvement opportunities.",
-      "Supported data analysis efforts to track tool performance and user engagement metrics."
-    ],
-    technologies: ["Python", "Product Management", "User Research", "Data Analysis"]
+const initialVisibleTechCount = 3
+
+export default function Timeline({ items }: { items: ExperienceItem[] }) {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
+
+  if (items.length === 0) {
+    return <p className="text-center text-muted-foreground">No experience added yet.</p>
   }
-];
-
-const initialVisibleTechCount = 3;
-
-export default function Timeline() {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-
-  const handleToggleExpand = (index: number) => {
-    setExpandedIndex(expandedIndex === index ? null : index);
-  };
 
   return (
     <div className="relative">
-      {/* Timeline line */}
       <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-black/10"></div>
 
       <div className="space-y-12">
-        {experiences.map((exp, index) => (
+        {items.map((exp, index) => (
           <motion.div
-            key={index}
+            key={`${exp.company}-${index}`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
             className="relative"
           >
-            {/* Timeline dot */}
             <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white"></div>
 
-            <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8`}>
-              {/* Content */}
+            <div className={`flex flex-col ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-8`}>
               <div className="w-full md:w-1/2">
-                <div className="bg-white/50 rounded-xl border-2 border-black p-6 cursor-pointer" onClick={() => handleToggleExpand(index)}>
-                  {/* Always visible content */}
+                <div
+                  className="bg-white/50 rounded-xl border-2 border-black p-6 cursor-pointer"
+                  onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
+                >
                   <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                     <div>
                       <h2 className="text-2xl font-bold">{exp.role}</h2>
@@ -116,42 +47,35 @@ export default function Timeline() {
                   </div>
 
                   <div className="flex flex-wrap gap-2 mb-4">
-                     {/* Initially visible technologies and toggle indicator */}
                     {exp.technologies.slice(0, initialVisibleTechCount).map((tech, i) => (
-                      <span
-                        key={i}
-                        className="px-3 py-1 bg-black/5 rounded-full text-sm font-medium"
-                      >
+                      <span key={i} className="px-3 py-1 bg-black/5 rounded-full text-sm font-medium">
                         {tech}
                       </span>
                     ))}
                     {exp.technologies.length > initialVisibleTechCount && expandedIndex !== index && (
-                       <span className="px-3 py-1 bg-black/10 rounded-full text-sm font-medium text-primary">
+                      <span className="px-3 py-1 bg-black/10 rounded-full text-sm font-medium text-primary">
                         +{exp.technologies.length - initialVisibleTechCount} more
                       </span>
                     )}
                   </div>
 
-                  {/* Collapsible content */}
                   {expandedIndex === index && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
+                      animate={{ opacity: 1, height: "auto" }}
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
                       <ul className="list-disc list-inside space-y-2 mb-4">
                         {exp.description.map((item, i) => (
-                          <li key={i} className="text-muted-foreground">{item}</li>
+                          <li key={i} className="text-muted-foreground">
+                            {item}
+                          </li>
                         ))}
                       </ul>
                       <div className="flex flex-wrap gap-2">
-                         {/* Remaining technologies when expanded, shown after the initial ones */}
                         {exp.technologies.slice(initialVisibleTechCount).map((tech, i) => (
-                          <span
-                            key={i}
-                            className="px-3 py-1 bg-black/5 rounded-full text-sm font-medium"
-                          >
+                          <span key={i} className="px-3 py-1 bg-black/5 rounded-full text-sm font-medium">
                             {tech}
                           </span>
                         ))}
@@ -161,12 +85,11 @@ export default function Timeline() {
                 </div>
               </div>
 
-              {/* Empty space for alternating layout */}
               <div className="w-full md:w-1/2"></div>
             </div>
           </motion.div>
         ))}
       </div>
     </div>
-  );
-} 
+  )
+}
