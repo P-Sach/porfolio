@@ -16,6 +16,20 @@ export function isSupabaseConfigured(): boolean {
   }
 }
 
+/** Names (never values) of the env vars that are missing or invalid. */
+export function missingAdminConfig(): string[] {
+  const missing: string[] = []
+  let urlOk = false
+  try {
+    urlOk = Boolean(supabaseUrl) && ["https:", "http:"].includes(new URL(supabaseUrl!).protocol)
+  } catch {}
+  if (!urlOk) missing.push(supabaseUrl ? "NEXT_PUBLIC_SUPABASE_URL (set, but not a valid https:// URL)" : "NEXT_PUBLIC_SUPABASE_URL")
+  if (!supabaseAnonKey) missing.push("NEXT_PUBLIC_SUPABASE_ANON_KEY")
+  if (!process.env.SUPABASE_SERVICE_ROLE_KEY) missing.push("SUPABASE_SERVICE_ROLE_KEY")
+  if (!process.env.ADMIN_EMAIL) missing.push("ADMIN_EMAIL")
+  return missing
+}
+
 /** The admin area additionally needs the service-role key and an owner email. */
 export function isAdminConfigured(): boolean {
   return (

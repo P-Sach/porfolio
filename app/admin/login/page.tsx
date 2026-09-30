@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation"
 import { getAdminUser } from "@/lib/auth"
-import { isAdminConfigured } from "@/lib/supabase/config"
+import { isAdminConfigured, missingAdminConfig } from "@/lib/supabase/config"
 import LoginForm from "./login-form"
 
 export default async function LoginPage() {
@@ -18,9 +18,17 @@ export default async function LoginPage() {
       ) : (
         <div className="space-y-2 text-sm">
           <p className="font-bold text-red-700">The CMS isn&apos;t configured on this deployment.</p>
+          <p>Missing or invalid on this deployment:</p>
+          <ul className="list-disc pl-5">
+            {missingAdminConfig().map((name) => (
+              <li key={name}>
+                <code>{name}</code>
+              </li>
+            ))}
+          </ul>
           <p>
-            Set <code>NEXT_PUBLIC_SUPABASE_URL</code>, <code>NEXT_PUBLIC_SUPABASE_ANON_KEY</code>,{" "}
-            <code>SUPABASE_SERVICE_ROLE_KEY</code> and <code>ADMIN_EMAIL</code>, then redeploy. See the README for the full setup.
+            Add them for the <b>Production</b> environment, then redeploy <b>without the build cache</b> (the{" "}
+            <code>NEXT_PUBLIC_</code> values are baked in at build time).
           </p>
         </div>
       )}
